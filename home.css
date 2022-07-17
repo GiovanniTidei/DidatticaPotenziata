@@ -1,0 +1,94 @@
+/* styling the  brands hero section */
+
+section#home {
+    padding-top: 100px;
+    padding-bottom: 0px;
+    /* background-color: #f4ebe7; */
+    height: 100vh;
+}
+
+section#home .container {
+    padding: 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    /*background: lightblue;*/
+    /* demo*/
+}
+
+section#home .container .section-title {
+    flex: 0 0 40%;
+    padding: 0 25px;
+}
+
+section#home .container .section-title h1 {
+    font-size: 50px;
+    padding: 0 0 50px 0px;
+}
+
+section#home .container .section-title p {
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: justify;
+    text-justify: inter-word;
+    color: black!important;
+}
+
+section#home .container .svg-container {
+    flex: 0 0 47%;
+    height: 100%;
+}
+
+
+/* making the hero section responsive */
+
+@media only screen and (max-width: 600px) {
+    section#home {
+        height: auto;
+    }
+    section#home .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section#home .container .section-title {
+        flex: 0 0 80%;
+        padding: 0px 0px;
+        margin: 0px 0;
+    }
+    section#home .container .section-title h1 {
+        font-size: 30px;
+        padding: 20px 0 40px;
+    }
+    section#home .container .svg-container {
+        flex: 0 0 99%;
+    }
+}
+
+
+/*###############################*/
+
+.goToPortfolio {
+    padding-bottom: 200%;
+    background: none;
+    border: solid 2px #474544;
+    color: #474544;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 20px 35px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    font-family: "Raleway";
+}
+
+.goToPortfolio:hover {
+    background: #474544;
+    color: #F2F3EB;
+}

@@ -1,0 +1,205 @@
+/* styling header */
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 50px 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.container {
+    padding: 20px 100px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.primary-menu ul {
+    display: flex;
+    height: 100%;
+}
+
+#primary-menu ul li a {
+    color: #222;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    padding: 15px 0;
+    margin: 0 23px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#primary-menu ul li.menu-button a,
+.brand a {
+    margin: 0 10px;
+    padding: 15px 15px;
+    border-color: #dcdcdc;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    position: relative;
+}
+
+#primary-menu ul li.menu-button a:hover {
+    border-color: #222;
+}
+
+#primary-menu ul li:not(.menu-button) a::before,
+.brand a::before {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    content: '';
+    display: inline-block;
+}
+
+#primary-menu ul li:not(.menu-button) a:hover::before,
+.brand a:hover::before {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeInUp;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        background: #222;
+    }
+}
+
+
+/* styling hero section */
+
+.brand a {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px 15px 0 -20px;
+}
+
+
+/* sidenav */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    right: 0;
+    background-color: rgba(2, 2, 2, 0.952);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.mask {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 105;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-image: url(https://scontent-fco1-1.xx.fbcdn.net/v/t31.0-8/18155773_1169036089873084_3808885652471556765_o.jpg?_nc_cat=104&_nc_sid=daf655&_nc_ohc=GY5OE4bVoT0AX8dAHGv&_nc_ht=scontent-fco1-1.xx&oh=34958b774b1be6453678b59facb6777a&oe=5EF6CA40&dl=1);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fcfcfc86!important;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    text-decoration: underline;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#primary-menu ul li span.button {
+    display: block;
+    height: 100%;
+    padding-left: 5px;
+    width: 40px;
+    position: relative;
+    cursor: pointer;
+}
+
+#primary-menu ul li span.button::before,
+#primary-menu ul li span.button::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #222;
+    transition: all 0.5s;
+    position: absolute;
+    top: 50%;
+}
+
+#primary-menu ul li span.button::before {
+    transform: translateY(-5px);
+}
+
+#primary-menu ul li span.button::after {
+    transform: translateY(5px);
+}
+
+
+/* animate on hover */
+
+#primary-menu ul li span.button:hover::before {
+    transform: translateY(-9px);
+}
+
+#primary-menu ul li span.button:hover::after {
+    transform: translateY(9px);
+}
+
+
+/* making the navbar responsive */
+
+@media only screen and (max-width: 600px) {
+    .header-container {
+        padding: 0 50px;
+    }
+    #primary-menu ul li:not(.menu-button) a {
+        display: none;
+    }
+}
+
+.toggleButton {}
