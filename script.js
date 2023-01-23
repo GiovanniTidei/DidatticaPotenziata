@@ -2,7 +2,7 @@
 window.addEventListener("scroll", showFooterOnScroll);
 
 var string =
-    "Sostengo allo studio in tutte le materie in presenza e/o online dagli 8 ai 16 anni";
+    "Sostegno allo studio in tutte le materie in presenza e/o online dagli 8 ai 16 anni";
 var str = string.split("");
 var el = document.getElementById("str");
 (function animate() {
