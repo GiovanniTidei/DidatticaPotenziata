@@ -22,7 +22,7 @@ function showFooterOnScroll() {
     var pageHeight = document.body.offsetHeight;
 
     // Condizione per mostrare il footer quando si è scrollato il 90% della pagina
-    if (currentScroll >= pageHeight * 0.4) {
+    if (currentScroll >= pageHeight * 0.1) {
         footer.style.display = "block";
     } else {
         footer.style.display = "none";
